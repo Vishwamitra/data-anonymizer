@@ -1,17 +1,34 @@
 {
     "tables": [
         {
-            "table_name": "",
-            "primary_key": "",
+            "table_name": "CUSTOMER",
+            "primary_key": "CUST_ID",
             "foreign_key": "",
             "columns": [
                 {
-                    "name": "",
-                    "type": ""
+                    "name": "FIRST_NAME",
+                    "type": "FAKER_FIRST_NAME_TYPE"
+                },
+                {
+                    "name": "LAST_NAME",
+                    "type": "FAKER_LAST_NAME_TYPE"
+                }
+            ]
+        },
+        {
+            "table_name": "ADDRESS",
+            "foreign_key": "ORD_ID",
+            "columns": [
+                {
+                    "name": "STREET",
+                    "type": "FAKER_STREET_TYPE"
+                },
+                {
+                    "name": "ZIP_CODE",
+                    "type": "FAKER_ZIP_CODE_TYPE"
                 },
                 {}
             ]
-        },
-        {}
+        }
     ]
 }
