@@ -1,0 +1,17 @@
+{
+    "tables": [
+        {
+            "table_name": "",
+            "primary_key": "",
+            "foreign_key": "",
+            "columns": [
+                {
+                    "name": "",
+                    "type": ""
+                },
+                {}
+            ]
+        },
+        {}
+    ]
+}
