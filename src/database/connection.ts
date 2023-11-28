@@ -17,16 +17,17 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import app from './app';
 
-const PORT = process.env.PORT || 5000;
+const Sequelize = require('sequelize');
 
-app.listen(PORT, () => {
-  if (process.env.NODE_ENV !== 'production') {
-    console.log(
-      `⚡️[server]: Server is running at ${process.env.REACT_APP_SERVER_URI}:${process.env.REACT_APP_SERVER_PORT}\n📖[Documentation]: Backend Documentation at ${process.env.REACT_APP_SERVER_URI}:${process.env.REACT_APP_SERVER_PORT}/docs `
-    );
-  } else {
-    console.log('⚡️[server]: Anonymizer Backend server has started');
-  }
+const DATABASE_NAME = process.env.DATABASE_NAME
+const DATABASE_USER = process.env.DATABASE_USER
+const DATABASE_PASSWORD = process.env.DATABASE_PASSWORD
+const DATABASE_HOST = process.env.DATABASE_HOST
+
+const sequelize = new Sequelize(DATABASE_NAME, DATABASE_USER, DATABASE_PASSWORD, {
+  host: DATABASE_HOST,
+  dialect: 'mysql',
 });
+
+module.exports = sequelize;
