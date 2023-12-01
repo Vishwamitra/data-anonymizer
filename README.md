@@ -35,7 +35,7 @@ http://localhost:5000/docs/
 
 
 ## Request Json
-To know more about the request JSON sample read this docs <a href="../data-anonymizer/docs/config.md">click here</a>
+To know more about the request JSON sample read this docs <a href="./docs/config.md">click here</a>
 
 
 ## Linting
@@ -52,10 +52,10 @@ npm run fix
 
 # Temporary Database to test the API
 
-To spinup a database locally and test the above API, read the docs <a href="../data-anonymizer/sql-test-data/README.md">click here</a>
+To spinup a database locally and test the above API, read the docs <a href="./sql-test-data/README.md">click here</a>
 
 # How does it work?
-To know more about - how it works <a href="../data-anonymizer/docs/how-it-works.md">read this guide.</a>
+To know more about - how it works <a href="./docs/how-it-works.md">read this guide.</a>
 
 ## License
 

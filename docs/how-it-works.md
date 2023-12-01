@@ -8,28 +8,7 @@ This Data Anonymization application, developed using the React framework with Ty
 
 1. **Request Format:**
 
-   Send a POST request to the API with a JSON payload specifying the tables and columns you want to anonymize. For example:
-
-   ```json
-   {
-    "batch_size": 1000,
-    "tables": [
-        {
-            "table_name": "CUSTOMER",
-            "key": "CUST_ID",
-            "columns": [
-                {
-                    "name": "FIRST_NAME",
-                    "type": "person.first_name"
-                },
-                {
-                    "name": "LAST_NAME",
-                    "type": "faker.last_name"
-                }
-            ]
-        },
-    ]
-}
+   Send a POST request to the API with a JSON payload specifying the tables and columns you want to anonymize. To know more about this request json <a href="config.md">read the docs </a>
 
 ## Anonymization Process:
 
