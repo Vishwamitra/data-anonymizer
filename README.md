@@ -32,6 +32,10 @@ All the backend APIs are documented here at this URL after successful build.
 http://localhost:5000/docs/
 
 
+## Request Json
+To know more about the request JSON sample read this docs <a href="../data-anonymizer/docs/config.md">click here</a>
+
+
 ## Linting
 You can run linting on the project using the following command:
 ```
@@ -44,9 +48,12 @@ To automatically fix linting issues, run the following command:
 npm run fix
 ```
 
-## Database to test the implementation
+# Temporary Database to test the API
 
-To spinup a database locally and test the above API, <a href="../data-anonymizer/sql-test-data/README.md">click here</a>
+To spinup a database locally and test the above API, read the docs <a href="../data-anonymizer/sql-test-data/README.md">click here</a>
+
+# How does it work?
+To know more about - how it works <a href="../data-anonymizer/docs/how-it-works.md">read this guide.</a>
 
 ## License
 
