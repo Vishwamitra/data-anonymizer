@@ -26,8 +26,7 @@ export interface Column {
  */
 export interface Table {
   table_name: string;
-  primary_key?: string;
-  foreign_key?: string;
+  key: string;
   columns: Column[];
 }
 
@@ -42,5 +41,6 @@ export interface Table {
  * @typedef {Config}
  */
 export interface Config {
+  batch_size: number,
   tables: Table[];
 }

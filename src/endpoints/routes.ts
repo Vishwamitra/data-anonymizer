@@ -21,7 +21,6 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import express from 'express';
 import v1_anonymize_routes from './v1/routes/anonymize';
-
 const router = express.Router();
 router.use('/api/v1', v1_anonymize_routes);
 

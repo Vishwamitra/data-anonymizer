@@ -21,7 +21,7 @@ import express, {Application} from 'express';
 import router from './endpoints/routes';
 import swaggerUi from 'swagger-ui-express';
 import bodyParser from 'body-parser';
-import cors from 'cors';
+const cors = require('cors');
 
 const app: Application = express();
 

@@ -1,9 +1,9 @@
 {
+    "batch_size": 1000,
     "tables": [
         {
             "table_name": "CUSTOMER",
-            "primary_key": "CUST_ID",
-            "foreign_key": "",
+            "key": "CUST_ID",
             "columns": [
                 {
                     "name": "FIRST_NAME",
@@ -17,7 +17,7 @@
         },
         {
             "table_name": "ADDRESS",
-            "foreign_key": "ORD_ID",
+            "key": "ORD_ID",
             "columns": [
                 {
                     "name": "STREET",
@@ -26,8 +26,7 @@
                 {
                     "name": "ZIP_CODE",
                     "type": "FAKER_ZIP_CODE_TYPE"
-                },
-                {}
+                }
             ]
         }
     ]

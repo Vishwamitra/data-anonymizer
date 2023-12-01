@@ -19,21 +19,30 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 /** Routes for all endpoints related to Google Cloud Workflows */
 
-import express from 'express';
+import express, { Request, Response, NextFunction } from 'express';
+import Ajv from 'ajv';
 import AnonymizerController from '../../../controllers/v1/anonymize';
-import {Config} from '../../../types/types';
 
 const v1_anonymize_routes = express.Router();
+const schemaFilePath = require('../../../../schemas/schema.json');
 
-// TO DO - Skeleton
-v1_anonymize_routes.post('/updateData/:tableName', async (req, res) => {
-  //  #swagger.tags=['Update Tables']
+const validateRequest = (req: Request, res:Response, next: NextFunction) => {
+  const ajv = new Ajv();
+  const validate = ajv.compile(schemaFilePath);
+
+  if (!validate(req.body)) {
+    return res.status(400).json({ errors: validate.errors });
+  }
+  next();
+};
+
+v1_anonymize_routes.get('/updateData/', validateRequest, async (req, res) => {
   try {
     const controller = new AnonymizerController();
-    const response = await controller.updateTable(req);
+    const response = await controller.updateTable(req.body);
     return res.send(response);
   } catch (errors) {
-    res.send({errors});
+    res.send({ errors });
   }
 });
 

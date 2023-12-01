@@ -19,12 +19,13 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import app from './app';
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.REACT_APP_SERVER_PORT;
 
 app.listen(PORT, () => {
   if (process.env.NODE_ENV !== 'production') {
     console.log(
-      `⚡️[server]: Server is running at ${process.env.REACT_APP_SERVER_URI}:${process.env.REACT_APP_SERVER_PORT}\n📖[Documentation]: Backend Documentation at ${process.env.REACT_APP_SERVER_URI}:${process.env.REACT_APP_SERVER_PORT}/docs `
+      `⚡️[server]: Server is running at ${process.env.REACT_APP_SERVER_URI}:${process.env.REACT_APP_SERVER_PORT}
+      \n📖[Documentation]: Backend Documentation at ${process.env.REACT_APP_SERVER_URI}:${process.env.REACT_APP_SERVER_PORT}/docs `
     );
   } else {
     console.log('⚡️[server]: Anonymizer Backend server has started');

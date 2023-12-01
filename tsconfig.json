@@ -1,8 +1,8 @@
 {
   "exclude": ["./coverage", "./dist", "__tests__", "jest.config.js"],
-  "types": ["node", "express", "cors", "swagger-ui-express"],
+  "types": ["node", "express", "cors", "swagger-ui-express", "faker"],
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "commonjs",
     "outDir": "./build",
     "inlineSourceMap": true,
