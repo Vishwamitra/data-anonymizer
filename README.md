@@ -44,18 +44,9 @@ To automatically fix linting issues, run the following command:
 npm run fix
 ```
 
-## Building for Production
-To build the web application for production, use the following command:
-```
-npm run build
-```
+## Database to test the implementation
 
-This will create a production-ready build in the build folder. The build process optimizes the application for performance, including minification and file hashing.
-
-Your application is now prepared for deployment!
-
-
-
+To spinup a database locally and test the above API, <a href="../data-anonymizer/sql-test-data/README.md">click here</a>
 
 ## License
 
